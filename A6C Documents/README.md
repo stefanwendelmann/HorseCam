@@ -30,7 +30,9 @@ AT+CAMPOST=”192.168.1.111/A6C/123.jpg”,80 //Fotos an die Adresse des Content
 Konfigurieren Sie die Kamera.
 Befehlsformat ist wie folgt:
 AT+CAMCFG=mode,param
+
 mode|Beschreibung|Parameter
+--- | --- | ---
 0|Blitz|0 geschlossen 1 automatisch 2 offen
 1|Nachtsicht|0 aus 1 ein
 2|Bildqualität|0  1  2 ?
