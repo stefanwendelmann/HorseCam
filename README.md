@@ -5,6 +5,15 @@ A A6C driven Project, wich is used to read SMS and Send a Picture taken by the A
 
 ![Alt text](Communication.png?raw=true "Optional Title")
 
+<h1>BOM</h1>
+A6C
+Arduino Nano (inkluding USB Cable for it)
+SMA Antenna
+SMA extension
+N-Channel Mosfet like 3055
+SIM Card (i got mine from Netzclub)
+Step Down modul (low power consumption)
+i will add more soon
 <h1>Links</h1>
 <h3>Raymond Tunning's Blog</h3>
 https://raymondtunning.wordpress.com/tag/a6c/
@@ -12,3 +21,7 @@ https://raymondtunning.wordpress.com/tag/a6c/
 http://wiki.ai-thinker.com/gprs
 <h3>Google Translator</h3>
 https://translate.google.de/m/translate
+
+<h1>Resources</h1>
+Nano Pinout
+http://www.pighixxx.com/test/wp-content/uploads/2014/11/nano.png

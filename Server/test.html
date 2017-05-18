@@ -1,0 +1,34 @@
+<form action="/profile/index/sendmessage" method="post" enctype="application/x-www-form-urlencoded">
+<div class="upload_form">
+    <dt id="message-label"><label class="optional" for="message">Enter Message</label></dt>
+    <dd id="message-element">
+    <textarea cols="80" rows="50" id="message" name="message">
+Testmessage
+        </textarea></dd>
+    <dt id="id-label">&nbsp;</dt>
+    <dd id="id-element">
+    <input type="hidden" id="id" value="145198" name="id"></dd>
+    <dt id="send_message-label">&nbsp;</dt>
+    <dd id="send_message-element">
+    <input type="submit" class="sendamessage" value="Send" id="send_message" name="send_message"></dd>
+</div>
+</form>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$("input.sendamessage").click(function(event) {
+event.preventDefault();
+
+var message = $('textarea#message').val();
+var id      = $('input#id').val();
+url = "http://localhost"
+
+var posting = $.post(url, message)
+
+posting.done(function( data ) {
+  alert(message);
+});
+});
+
+
+</script>
