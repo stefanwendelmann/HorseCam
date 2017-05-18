@@ -10,7 +10,7 @@ A6C
 Arduino Nano (inkluding USB Cable for it)
 SMA Antenna
 SMA extension
-N-Channel Mosfet like 3055
+N-Channel Mosfet like 3055 (i took "2N7002 702 7002 SMD SOT-23 N -Kanal- 60V 115mA MosFET")
 SIM Card (i got mine from Netzclub)
 Step Down modul (low power consumption)
 i will add more soon
