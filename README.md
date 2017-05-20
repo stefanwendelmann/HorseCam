@@ -21,6 +21,8 @@ https://raymondtunning.wordpress.com/tag/a6c/
 http://wiki.ai-thinker.com/gprs
 <h3>Google Translator</h3>
 https://translate.google.de/m/translate
+<h3>YouTube Links</h3>
+https://www.youtube.com/watch?v=4xaPfY7r8qU
 
 <h1>Resources</h1>
 Nano Pinout
