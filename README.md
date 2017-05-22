@@ -12,7 +12,7 @@ SMA Antenna
 SMA extension
 N-Channel Mosfet like 3055 (i took "2N7002 702 7002 SMD SOT-23 N -Kanal- 60V 115mA MosFET")
 SIM Card (i got mine from Netzclub)
-Step Down modul (low power consumption)
+Step Down modul (low power consumption) i took a LM2596 (assabling instructions will follow)
 i will add more soon
 <h1>Links</h1>
 <h3>Raymond Tunning's Blog</h3>
@@ -27,3 +27,6 @@ https://www.youtube.com/watch?v=4xaPfY7r8qU
 <h1>Resources</h1>
 Nano Pinout
 http://www.pighixxx.com/test/wp-content/uploads/2014/11/nano.png
+
+<h1>PCB Prototyping</h1>
+http://pcbshopper.com/

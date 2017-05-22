@@ -5812,6 +5812,7 @@ Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
 <part name="NANO3R" library="SparkFun-Connectors" deviceset="CONN_15" device=""/>
 <part name="A6CL" library="SparkFun-Connectors" deviceset="CONN_12" device=""/>
 <part name="A6CR" library="SparkFun-Connectors" deviceset="CONN_12" device=""/>
+<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5832,13 +5833,14 @@ Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
 <instance part="P+2" gate="VCC" x="60.96" y="38.1" rot="R180"/>
 <instance part="P+3" gate="VCC" x="119.38" y="99.06"/>
 <instance part="IN+" gate="G$1" x="-2.54" y="43.18"/>
-<instance part="IN-" gate="G$1" x="25.4" y="40.64"/>
+<instance part="IN-" gate="G$1" x="27.94" y="40.64" rot="R270"/>
 <instance part="OUT+" gate="G$1" x="-2.54" y="63.5"/>
 <instance part="OUT-" gate="G$1" x="17.78" y="63.5"/>
 <instance part="NANO3L" gate="G$1" x="73.66" y="63.5" rot="MR0"/>
 <instance part="NANO3R" gate="G$1" x="76.2" y="63.5"/>
 <instance part="A6CL" gate="G$1" x="134.62" y="78.74" rot="MR0"/>
 <instance part="A6CR" gate="G$1" x="170.18" y="45.72" rot="MR0"/>
+<instance part="GND4" gate="1" x="27.94" y="5.08"/>
 </instances>
 <busses>
 </busses>
@@ -5905,6 +5907,23 @@ Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
 <wire x1="63.5" y1="48.26" x2="50.8" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="48.26" x2="50.8" y2="40.64" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IN-" gate="G$1" pin="1"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="27.94" y1="33.02" x2="27.94" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="GND"/>
+<wire x1="27.94" y1="25.4" x2="27.94" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="20.32" x2="20.32" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="25.4" x2="27.94" y2="25.4" width="0.1524" layer="91"/>
+<junction x="27.94" y="25.4"/>
+<pinref part="J1" gate="G$1" pin="GND"/>
+<wire x1="35.56" y1="22.86" x2="35.56" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="25.4" x2="27.94" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="GNDBREAK"/>
+<wire x1="38.1" y1="22.86" x2="38.1" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="25.4" x2="35.56" y2="25.4" width="0.1524" layer="91"/>
+<junction x="35.56" y="25.4"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -5925,34 +5944,6 @@ Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
 <wire x1="60.96" y1="45.72" x2="60.96" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="IN+" gate="G$1" pin="1"/>
-<pinref part="J2" gate="G$1" pin="VBUS"/>
-<wire x1="5.08" y1="43.18" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="43.18" x2="10.16" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="PWR"/>
-<wire x1="40.64" y1="22.86" x2="40.64" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="50.8" x2="10.16" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="50.8" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
-<junction x="10.16" y="43.18"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="GNDBREAK"/>
-<pinref part="J1" gate="G$1" pin="GND"/>
-<wire x1="38.1" y1="22.86" x2="35.56" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="22.86" x2="35.56" y2="40.64" width="0.1524" layer="91"/>
-<junction x="35.56" y="22.86"/>
-<pinref part="J2" gate="G$1" pin="GND"/>
-<pinref part="IN-" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="20.32" x2="33.02" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="20.32" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="40.64" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
-<junction x="33.02" y="40.64"/>
-</segment>
-</net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="RST" gate="G$1" pin="D"/>
@@ -5960,6 +5951,37 @@ Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
 <wire x1="147.32" y1="53.34" x2="147.32" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="A6CR" gate="G$1" pin="7"/>
 <wire x1="147.32" y1="45.72" x2="160.02" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="NANO3R" gate="G$1" pin="5"/>
+<wire x1="86.36" y1="55.88" x2="119.38" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="55.88" x2="119.38" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="A6CL" gate="G$1" pin="4"/>
+<wire x1="119.38" y1="71.12" x2="124.46" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="NANO3R" gate="G$1" pin="6"/>
+<wire x1="86.36" y1="58.42" x2="116.84" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="58.42" x2="116.84" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="A6CL" gate="G$1" pin="5"/>
+<wire x1="116.84" y1="73.66" x2="124.46" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="VBUS"/>
+<wire x1="10.16" y1="20.32" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="IN+" gate="G$1" pin="1"/>
+<wire x1="10.16" y1="43.18" x2="5.08" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="PWR"/>
+<wire x1="40.64" y1="22.86" x2="40.64" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="48.26" x2="10.16" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="48.26" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
+<junction x="10.16" y="43.18"/>
 </segment>
 </net>
 </nets>

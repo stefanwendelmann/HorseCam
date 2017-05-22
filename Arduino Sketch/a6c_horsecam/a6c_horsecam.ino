@@ -10,7 +10,7 @@
 #define A6board Serial1
 #define A6baud 115200
 #else
-SoftwareSerial A6board (2, 3); // RX, TX
+SoftwareSerial A6board (3, 2); // RX, TX
 #define A6baud 9600
 #endif
 
