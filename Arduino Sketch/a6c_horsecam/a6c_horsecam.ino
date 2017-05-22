@@ -6,13 +6,8 @@
 #define TIMEOUT 3
 #define RST 2
 
-#ifdef Serial1
-#define A6board Serial1
-#define A6baud 115200
-#else
 SoftwareSerial A6board (3, 2); // RX, TX
 #define A6baud 9600
-#endif
 
 #define SERIALTIMEOUT 3000
 
@@ -25,18 +20,26 @@ void setup() {
     Serial.println("Setting up the Modem...");
   } while (a6begin() != OK);
   Serial.println("Modem setup done");
+  a6command("AT+CNMI=0,2,0,1,0", "OK", "yy", 5000, 2); // Set display it directly
+  a6command("AT+CNMI?", "OK", "yy", 1500, 2); // Check SMS Recive mode
 }
 
 void loop() {
-  Serial.println("Loop start...");
-  //printSignalQuality();
-  readAllSMS();
-  delay(1000);
+  //Read the input of the A6 Board
+  if (A6board.available())  {
+    s = A6board.readString();
+  }
+  //Check if its a message notification
+  if (s.length() > 0 && s.startsWith("\r\n+CMT: \"")) {
+    Serial.println(s);
+  }
+  delay(100);
 }
 
+
 void readAllSMS() {
-  a6command("AT+CNMI?","OK","yy",1500,2); // Check SMS Recive mode
-  a6command("AT+CNMI=1,2,0,0,0","OK","yy",5000,2); // Set "send sms to SIM" and display it directly
+  a6command("AT+CNMI?", "OK", "yy", 1500, 2); // Check SMS Recive mode
+
   a6command("AT+CMGF=1", "OK", "yy", 1500, 2);
   a6command("AT+CMGL=\"ALL\"", "OK", "yy", 10000, 1);
 
@@ -114,7 +117,7 @@ String a6read() {
   if (A6board.available())  {
     reply = A6board.readString();
   }
-  //  Serial.print("Reply: ");
-  //  Serial.println(reply);
+  //Serial.print("Reply: ");
+  //Serial.println(reply);
   return reply;
 }
