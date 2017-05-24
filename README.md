@@ -6,19 +6,19 @@ A A6C driven Project, wich is used to read SMS and Send a Picture taken by the A
 ![Alt text](Communication.png?raw=true "Optional Title")
 
 # BOM
-..* A6C
-..* Arduino Nano v3 (incl. USB Cable for programming)
-..* SMA Antenna
-..* maybe SMA extension
-..* N-Channel Mosfet like 3055 (i took "2N7002 702 7002 SMD SOT-23 N -Kanal- 60V 115mA MosFET")
-..* SIM Card (i got mine from Netzclub)
-..* Step Down modul (low power consumption) i took a LM2596 (assabling instructions will follow)
-..* i will add more soon
+* A6C
+* Arduino Nano v3 (incl. USB Cable for programming)
+* SMA Antenna
+* maybe SMA extension
+* N-Channel Mosfet like 3055 (i took "2N7002 702 7002 SMD SOT-23 N -Kanal- 60V 115mA MosFET")
+* SIM Card (i got mine from Netzclub)
+* Step Down modul (low power consumption) i took a LM2596 (assabling instructions will follow)
+* i will add more soon
 
 # Links
 ## Donate we need a PCB Milling CNC for our fablab
 
-![Alt text](/icons/cnc.pnc?raw=true "Optional Title")
+![Alt text](icons/cnc.png?raw=true "Optional Title")
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5DG62E887XW4E)
 
