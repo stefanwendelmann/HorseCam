@@ -12,7 +12,8 @@ A A6C driven Project, wich is used to read SMS and Send a Picture taken by the A
 * maybe SMA extension
 * N-Channel Mosfet like 3055 (i took "2N7002 702 7002 SMD SOT-23 N -Kanal- 60V 115mA MosFET")
 * SIM Card (i got mine from Netzclub)
-* Step Down modul (low power consumption) i took a LM2596 (assabling instructions will follow)
+* ~~Step Down modul (low power consumption) i took a LM2596 (assabling instructions will follow)~~
+* 5V Powerbank and Micro USB Cable
 * i will add more soon
 
 # Links
